@@ -47,8 +47,17 @@ export function Loader({ label, onDone }: LoaderProps) {
       intro
         .to(paths, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut', stagger: 0.08 })
         .to('.loader__fill', { opacity: 1, duration: 0.6 }, '-=0.3')
-        .to('.loader__fill .bf-wing--left', { scaleX: 0.25, duration: 0.22, yoyo: true, repeat: 5, ease: 'sine.inOut', transformOrigin: '100px 80px' }, '<')
-        .to('.loader__fill .bf-wing--right', { scaleX: 0.25, duration: 0.22, yoyo: true, repeat: 5, ease: 'sine.inOut', transformOrigin: '100px 80px' }, '<');
+        // El contorno se apaga para que solo aletee la mariposa rellena
+        .to('.loader__outline', { opacity: 0, duration: 0.5 }, '<')
+        // svgOrigin usa coordenadas del dibujo: (100, 80) es el cuerpo, así las dos alas giran desde el centro
+        .to('.loader__fill .bf-wing', {
+          scaleX: 0.18,
+          duration: 0.24,
+          yoyo: true,
+          repeat: 7,
+          ease: 'sine.inOut',
+          svgOrigin: '100 80',
+        }, '<');
 
       // En StrictMode el efecto se monta dos veces: la primera pasada no debe cerrar el loader
       let isCancelled = false;
