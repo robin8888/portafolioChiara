@@ -47,7 +47,7 @@ export const COPY = {
     heroKicker: 'Portfolio — 2026',
     heroRole: 'Choreographer · Dancer',
     heroScroll: 'Scroll to unfold',
-    statement: 'Movement is my mother tongue — every body tells a story the moment it begins to fly.',
+    statement: 'Movement is my mother tongue — every body tells a story.',
     reelTitle: 'Showreel',
     reelText:
       'A minute of presence, musicality and control. Commercial and urban vocabulary built on a classical foundation.',
@@ -70,7 +70,7 @@ export const COPY = {
     heroKicker: 'Portafolio — 2026',
     heroRole: 'Coreógrafa · Bailarina',
     heroScroll: 'Desliza para desplegar',
-    statement: 'El movimiento es mi lengua materna — cada cuerpo cuenta una historia en cuanto empieza a volar.',
+    statement: 'El movimiento es mi lengua materna — cada cuerpo cuenta una historia.',
     reelTitle: 'Videobook',
     reelText:
       'Un minuto de presencia, musicalidad y control. Lenguaje comercial y urbano sobre una base clásica.',
