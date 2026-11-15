@@ -41,10 +41,12 @@ export function buildPanelAnimations(container: gsap.core.Tween) {
     });
   });
 
-  // Parallax interior: la foto se mueve más despacio que su marco
-  gsap.utils.toArray<HTMLElement>('.parallax').forEach((media) => {
-    gsap.fromTo(media, { xPercent: -8, scale: 1.18 }, {
-      xPercent: 8,
+  // Parallax interior: la foto se mueve más despacio que su marco.
+  // En móvil no: necesita ampliar la foto y la recortaría
+  const isSmallScreen = window.innerWidth <= 820;
+  gsap.utils.toArray<HTMLElement>(isSmallScreen ? [] : '.parallax').forEach((media) => {
+    gsap.fromTo(media, { xPercent: -4, scale: 1.1 }, {
+      xPercent: 4,
       ease: 'none',
       scrollTrigger: { ...base, trigger: media.parentElement!, start: 'left right', end: 'right left' },
     });

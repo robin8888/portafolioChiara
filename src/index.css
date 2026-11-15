@@ -177,9 +177,9 @@ body::after {
 .work__intro { width: min(30vw, 440px); flex: 0 0 auto; }
 .work__gallery { display: flex; align-items: center; gap: 4.5vw; height: 100%; }
 .shot { position: relative; flex: 0 0 auto; display: grid; gap: 14px; }
-.shot--tall .shot__frame { height: 68vh; aspect-ratio: 0.62; }
-.shot--mid .shot__frame { height: 54vh; aspect-ratio: 0.75; }
-.shot--wide .shot__frame { height: 52vh; aspect-ratio: 1.3; }
+.shot__frame { aspect-ratio: var(--ratio); }
+.shot--tall .shot__frame { height: 68vh; }
+.shot--mid .shot__frame { height: 56vh; }
 .shot--high { align-self: flex-start; margin-top: 2vh; }
 .shot--low { align-self: flex-end; margin-bottom: 2vh; }
 .shot__frame { border-radius: 14px; background: var(--paper); }
@@ -337,9 +337,9 @@ body::after {
   .title--vertical { font-size: clamp(40px, 12vw, 64px); }
   .work__gallery { gap: 12vw; }
   .shot--high, .shot--low { align-self: center; margin: 0; }
-  .shot--tall .shot__frame { height: auto; width: 74vw; max-height: 62svh; }
-  .shot--mid .shot__frame { height: auto; width: 74vw; max-height: 58svh; }
-  .shot--wide .shot__frame { height: auto; width: 84vw; aspect-ratio: 1.15; }
+  /* Foto entera: el ancho sale de la proporción real y del alto disponible */
+  .shot--tall .shot__frame, .shot--mid .shot__frame { height: auto; width: min(80vw, calc(60svh * var(--ratio))); }
+  .shot:nth-child(3n + 1) .shot__frame { border-radius: 14px; }
   .shot figcaption { font-size: 17px; }
 
   .panel--styles { width: 100vw; align-items: center; }

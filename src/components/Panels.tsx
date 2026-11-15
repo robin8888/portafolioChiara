@@ -78,7 +78,7 @@ export function WorkPanel({ copy, lang }: PanelProps & { lang: Lang }) {
       <div className="work__gallery">
         {GALLERY.map((shot, i) => (
           <figure key={shot.src} className={`shot shot--${shot.size} shot--${i % 2 ? 'low' : 'high'}`}>
-            <div className="reveal shot__frame">
+            <div className="reveal shot__frame" style={{ '--ratio': shot.ratio } as React.CSSProperties}>
               <img src={shot.src} alt={`Chiara Capacci — ${shot.tag[lang]}`} loading="lazy" className="parallax" />
             </div>
             <figcaption>

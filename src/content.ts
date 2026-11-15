@@ -29,15 +29,17 @@ export const MEDIA = {
 export interface GalleryShot {
   src: string;
   tag: { en: string; es: string };
-  size: 'tall' | 'wide' | 'mid';
+  size: 'tall' | 'mid';
+  /** Ancho / alto de la foto: el marco usa su proporción real para no recortarla */
+  ratio: number;
 }
 
 export const GALLERY: GalleryShot[] = [
-  { src: '/media/chiara-1.webp', tag: { en: 'Contemporary', es: 'Contemporáneo' }, size: 'tall' },
-  { src: '/media/chiara-3.webp', tag: { en: 'Modeling', es: 'Modelaje' }, size: 'mid' },
-  { src: '/media/chiara-6.webp', tag: { en: 'Sessions', es: 'Sesiones' }, size: 'wide' },
-  { src: '/media/chiara-2.webp', tag: { en: 'Street', es: 'Street' }, size: 'tall' },
-  { src: '/media/chiara-4.webp', tag: { en: 'Urban couture', es: 'Moda urbana' }, size: 'mid' },
+  { src: '/media/chiara-1.webp', tag: { en: 'Contemporary', es: 'Contemporáneo' }, size: 'tall', ratio: 1368 / 2400 },
+  { src: '/media/chiara-3.webp', tag: { en: 'Modeling', es: 'Modelaje' }, size: 'mid', ratio: 1732 / 2400 },
+  { src: '/media/chiara-6.webp', tag: { en: 'Sessions', es: 'Sesiones' }, size: 'mid', ratio: 1686 / 2400 },
+  { src: '/media/chiara-2.webp', tag: { en: 'Street', es: 'Street' }, size: 'tall', ratio: 1600 / 2400 },
+  { src: '/media/chiara-4.webp', tag: { en: 'Urban couture', es: 'Moda urbana' }, size: 'mid', ratio: 1600 / 2400 },
 ];
 
 export const COPY = {
