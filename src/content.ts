@@ -49,8 +49,7 @@ export const COPY = {
     heroScroll: 'Scroll to unfold',
     statement: 'Movement is my mother tongue — every body tells a story.',
     reelTitle: 'Showreel',
-    reelText:
-      'A minute of presence, musicality and control. Commercial and urban vocabulary built on a classical foundation.',
+    reelText: 'A minute of presence, musicality and control.',
     sound: { on: 'Sound on', off: 'Sound off' },
     workTitle: 'Metamorphosis',
     stylesTitle: 'Disciplines',
@@ -72,8 +71,7 @@ export const COPY = {
     heroScroll: 'Desliza para desplegar',
     statement: 'El movimiento es mi lengua materna — cada cuerpo cuenta una historia.',
     reelTitle: 'Videobook',
-    reelText:
-      'Un minuto de presencia, musicalidad y control. Lenguaje comercial y urbano sobre una base clásica.',
+    reelText: 'Un minuto de presencia, musicalidad y control.',
     sound: { on: 'Con sonido', off: 'Sin sonido' },
     workTitle: 'Metamorfosis',
     stylesTitle: 'Disciplinas',
