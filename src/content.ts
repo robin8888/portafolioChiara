@@ -6,7 +6,7 @@ export type Lang = 'en' | 'es';
 
 export const CONTACT = {
   // ⚠️ Sustituir por los datos reales de Chiara
-  email: 'booking@chiaracapacci.com',
+  email: 'kiaky.na92@hotmail.it',
   instagram: 'pro_akira',
   city: 'Madrid · Available worldwide',
 };
