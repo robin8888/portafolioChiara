@@ -174,6 +174,7 @@ body::after {
 
 /* ---------- Portafolio ---------- */
 .panel--work { display: flex; align-items: center; gap: 6vw; padding-right: 8vw; }
+.work__subtitle { margin-top: 14px; font-family: var(--serif); font-style: italic; font-size: clamp(18px, 1.6vw, 26px); color: var(--violet); }
 .work__intro { width: max-content; max-width: 60vw; flex: 0 0 auto; }
 /* «Metamorfosis» es larga: tamaño propio para que entre entera en una línea */
 .title--vertical { font-size: clamp(54px, 6.4vw, 112px); }

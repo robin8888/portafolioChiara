@@ -74,6 +74,7 @@ export function WorkPanel({ copy, lang }: PanelProps & { lang: Lang }) {
         <h2 className="title title--vertical">
           <Split text={copy.workTitle} />
         </h2>
+        <p className="work__subtitle">{copy.workText}</p>
       </header>
       <div className="work__gallery">
         {GALLERY.map((shot, i) => (
