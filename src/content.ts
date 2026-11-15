@@ -34,7 +34,7 @@ export interface GalleryShot {
 
 export const GALLERY: GalleryShot[] = [
   { src: '/media/chiara-1.webp', tag: { en: 'Contemporary', es: 'Contemporáneo' }, size: 'tall' },
-  { src: '/media/chiara-3.webp', tag: { en: 'Editorial', es: 'Editorial' }, size: 'mid' },
+  { src: '/media/chiara-3.webp', tag: { en: 'Modeling', es: 'Modelaje' }, size: 'mid' },
   { src: '/media/chiara-6.webp', tag: { en: 'Floorwork', es: 'Suelo' }, size: 'wide' },
   { src: '/media/chiara-2.webp', tag: { en: 'Street', es: 'Street' }, size: 'tall' },
   { src: '/media/chiara-4.webp', tag: { en: 'Urban couture', es: 'Moda urbana' }, size: 'mid' },
