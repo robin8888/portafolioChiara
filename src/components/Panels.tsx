@@ -171,6 +171,7 @@ export function SignaturePanel() {
   return (
     <section className="panel panel--signature" aria-label="Chiara Capacci">
       <div className="signature__stage">
+        <img className="signature__photo" src="/media/chiara-signature.webp" alt="" aria-hidden="true" loading="lazy" />
         <ButterflySignature className="signature__canvas" />
       </div>
     </section>

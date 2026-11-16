@@ -7,10 +7,11 @@ import { LEFT_LOWER, LEFT_UPPER, RIGHT_LOWER, RIGHT_UPPER } from './ButterflyIco
 const SPRITE = 64;
 const FRAMES = 7;
 const TONES: [string, string][] = [
-  ['#f6a5c8', '#d9579a'],
-  ['#f8c4dc', '#c58cf0'],
-  ['#c58cf0', '#8a5ad8'],
-  ['#cdb8f4', '#6a3fc8'],
+  // Rosas claros: contrastan sobre la foto en violeta
+  ['#fff1f7', '#fbc6de'],
+  ['#ffe6f1', '#f8b4d3'],
+  ['#ffdaeb', '#f4a3c9'],
+  ['#fff6fa', '#f7bcd8'],
 ];
 
 function buildSpriteSheet() {
@@ -42,7 +43,7 @@ function buildSpriteSheet() {
         side.forEach((path) => ctx.fill(path));
         ctx.restore();
       }
-      ctx.fillStyle = '#3b1f5c';
+      ctx.fillStyle = '#c4508c';
       ctx.beginPath();
       ctx.ellipse(100, 84, 4.5, 28, 0, 0, Math.PI * 2);
       ctx.fill();
@@ -79,7 +80,7 @@ function buildSignature(width: number, height: number, isNarrow: boolean, maxCou
   // Tamaño de letra para que cada línea quepa a lo ancho y el conjunto a lo alto
   ctx.font = `100px ${FONT}`;
   const widest = Math.max(...lines.map((line) => ctx.measureText(line).width));
-  const size = Math.min(((isNarrow ? 0.7 : 0.76) * width * 100) / widest, (height * (isNarrow ? 0.24 : 0.3)));
+  const size = Math.min(((isNarrow ? 0.62 : 0.46) * width * 100) / widest, (height * (isNarrow ? 0.13 : 0.17)));
   ctx.font = `${size}px ${FONT}`;
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = '#fff';
@@ -87,7 +88,8 @@ function buildSignature(width: number, height: number, isNarrow: boolean, maxCou
   ctx.lineCap = 'round';
 
   const lineHeight = size * 0.92;
-  const top = height * 0.48 - (lines.length * lineHeight) / 2 + size * 0.62;
+  // Abajo de la sección, por encima de la barra de progreso
+  const top = height * (isNarrow ? 0.79 : 0.8) - (lines.length * lineHeight) / 2 + size * 0.62;
   const boxes = lines.map((line, i) => {
     const w = ctx.measureText(line).width;
     // En móvil el apellido entra algo desplazado, como una firma real
