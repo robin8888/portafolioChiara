@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { toggleSound, useVideoPlayback } from '../lib/sound';
 import { CONTACT, CONTACT_PORTRAIT, GALLERY, MEDIA, type Copy, type Lang } from '../content';
+import { ButterflySignature } from './ButterflySignature';
 import { ButterflyIcon } from './ButterflyIcon';
 import { ParticlePortrait } from './ParticlePortrait';
 import { Split } from './Split';
@@ -160,6 +161,17 @@ export function CrewPanel({ copy }: PanelProps) {
           <Split text={copy.crewTitle} />
         </h2>
         <p className="body-text">{copy.crewText}</p>
+      </div>
+    </section>
+  );
+}
+
+/** Escenario fijo mientras pasa la sección: las mariposas llegan en fila y escriben la firma de Chiara */
+export function SignaturePanel() {
+  return (
+    <section className="panel panel--signature" aria-label="Chiara Capacci">
+      <div className="signature__stage">
+        <ButterflySignature className="signature__canvas" />
       </div>
     </section>
   );

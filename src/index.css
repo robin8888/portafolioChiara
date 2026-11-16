@@ -231,6 +231,12 @@ body::after {
 .crew__text .title { font-size: clamp(36px, 3.6vw, 60px); }
 .crew__text .body-text { font-size: clamp(14px, 1vw, 16px); margin-top: 16px; }
 
+/* ---------- Firma de mariposas ---------- */
+/* Más ancha que la pantalla: el escenario se queda fijo mientras se recorre ese tramo extra */
+.panel--signature { width: 240vw; padding: 0; overflow: hidden; }
+.signature__stage { position: absolute; top: 0; left: 0; width: 100vw; height: 100%; will-change: transform; }
+.signature__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+
 /* ---------- Contacto ---------- */
 .panel--contact { width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
 .panel--contact > :not(.contact__watermark) { position: relative; z-index: 1; }
@@ -365,6 +371,8 @@ body::after {
   .crew__text .body-text { font-size: 13px; margin: 8px auto 0; }
   .crew__text .section-index { margin-bottom: 4px; }
   .crew__text .pill { margin-top: 18px; }
+
+  .panel--signature { width: 240vw; padding: 0; }
 
   .contact__title { font-size: clamp(54px, 16vw, 90px); margin: 18px 0 28px; }
   .contact__watermark { opacity: 0.35; right: -18%; }

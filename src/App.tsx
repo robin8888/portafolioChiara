@@ -8,7 +8,7 @@ import { Cursor } from './components/Cursor';
 import { LangSwitch } from './components/LangSwitch';
 import { SpeakerIcon } from './components/SpeakerIcon';
 import { Loader } from './components/Loader';
-import { ContactPanel, CrewPanel, HeroPanel, ReelPanel, StatementPanel, StylesPanel, WorkPanel } from './components/Panels';
+import { ContactPanel, CrewPanel, SignaturePanel, HeroPanel, ReelPanel, StatementPanel, StylesPanel, WorkPanel } from './components/Panels';
 import { toggleSound, useSound } from './lib/sound';
 
 // La escena 3D (three.js) va en un archivo aparte para que el loader aparezca al instante
@@ -186,6 +186,7 @@ export function App() {
           <WorkPanel copy={copy} lang={lang} />
           <StylesPanel copy={copy} />
           <CrewPanel copy={copy} />
+          <SignaturePanel />
           <ContactPanel copy={copy} />
         </div>
       </main>

@@ -17,6 +17,8 @@ export const scrollState = {
   gather: 0,
   /** 0 = partículas dispersas, 1 = retrato de la marca de agua formado */
   portrait: 0,
+  /** 0 = mariposas fuera de escena, 1 = firma escrita */
+  signature: 0,
 };
 
 export const prefersReducedMotion = () =>

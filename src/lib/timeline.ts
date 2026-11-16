@@ -89,6 +89,22 @@ export function buildPanelAnimations(container: gsap.core.Tween) {
 
   gsap.to('.marquee__track', { xPercent: -50, ease: 'none', scrollTrigger: { ...base, trigger: '.panel--styles', start: 'left right', end: 'right left' } });
 
+  // Firma de mariposas: el escenario se queda quieto mientras la sección pasa (pin dentro de la pista)
+  // y, durante ese tramo, la fila de mariposas llega y escribe el nombre
+  const signature = document.querySelector<HTMLElement>('.panel--signature');
+  if (signature) {
+    gsap.fromTo('.signature__stage', { x: 0 }, {
+      x: () => signature.offsetWidth - window.innerWidth,
+      ease: 'none',
+      scrollTrigger: { ...base, trigger: signature, start: 'left left', end: 'right right', invalidateOnRefresh: true },
+    });
+    gsap.fromTo(scrollState, { signature: 0 }, {
+      signature: 1,
+      ease: 'none',
+      scrollTrigger: { ...base, trigger: signature, start: 'left 40%', end: 'left -85%' },
+    });
+  }
+
   // Las micropartículas vuelan desde fuera y forman el retrato mientras llega el contacto
   gsap.fromTo(scrollState, { portrait: 0 }, {
     portrait: 1,
