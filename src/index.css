@@ -321,7 +321,7 @@ body::after {
   .hero__kicker { font-size: 10px; }
   .hero__name { font-size: clamp(56px, 17vw, 96px); margin-top: 10px; align-self: stretch; }
   .hero__line--italic { padding-left: 0.35em; }
-  .hero__figure { width: auto; height: min(42svh, 120vw); align-self: center; margin-top: 18px; }
+  .hero__figure { width: auto; height: min(50svh, 130vw); align-self: center; margin-top: 18px; }
   .hero__perched { width: 52px; right: -18px; }
   .hero__figure { order: 3; }
   .hero__role { order: 4; margin-top: auto; padding-top: 14px; font-size: 17px; }
@@ -335,7 +335,7 @@ body::after {
   .reel__text .title { font-size: clamp(44px, 13vw, 64px); }
   .reel__text .body-text { display: none; }
   .reel__text .pill { margin-top: 14px; }
-  .reel__frame { height: 50svh; }
+  .reel__frame { height: 62svh; }
   .reel__perched { width: 50px; left: -26px; }
   .reel__caption { display: none; }
   .section-index { margin-bottom: 8px; }
@@ -347,7 +347,7 @@ body::after {
   .work__gallery { gap: 12vw; }
   .shot--high, .shot--low { align-self: center; margin: 0; }
   /* Foto entera: el ancho sale de la proporción real y del alto disponible */
-  .shot--tall .shot__frame, .shot--mid .shot__frame { height: auto; width: min(80vw, calc(60svh * var(--ratio))); }
+  .shot--tall .shot__frame, .shot--mid .shot__frame { height: auto; width: min(90vw, calc(70svh * var(--ratio))); }
   .shot:nth-child(3n + 1) .shot__frame { border-radius: 14px; }
   .shot figcaption { font-size: 17px; }
 
@@ -364,7 +364,7 @@ body::after {
 
   .panel--crew { width: 100vw; flex-direction: column; justify-content: center; align-items: center; gap: 18px; padding-left: 20px; padding-right: 20px; }
   .crew__media { align-self: center; }
-  .crew__frame { width: min(86vw, calc(56svh * 0.8)); height: auto; border-radius: 20px; }
+  .crew__frame { width: min(90vw, calc(70svh * 0.8)); height: auto; border-radius: 20px; }
   .corner-butterfly { width: 40px; }
   .crew__text { width: 100%; text-align: center; }
   .crew__text .title { font-size: clamp(30px, 9vw, 40px); }
